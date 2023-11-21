@@ -1,9 +1,6 @@
 ## Papers
-===
 
 *Plop ! petit papier pour mettre toute mes idées/recherches/tests à plat, si vous voulez participer n'hésitez pas ! :)*
-
-
 
 
 ### HeXHTTP
@@ -55,9 +52,9 @@ En lisant un peu l'évolution du protocol HTTP nous pouvons vor qu'il en a exist
     - HTTP/2 compresse les en-têtes, étant donné que des en-têtes similaires sont échangés lors d'une suite de requêtes, on supprime ainsi la duplication et l'échange inutiles des données similaires.
     - Il permet au serveur de remplir le cache du client avant qu'il ne soit demandé par ce dernier, on parle alors d'évènements générés par le serveur.
 
-Bref, je me suis donc posé la question, si je testais de forcer les différents protocole lors d'une requête, obtiendrai je des résultats différents ?
+Bref, je me suis donc posé la question, si je testais de forcer les différents protocoles lors d'une requête, obtiendrai je des résultats différents ?
 
-Spoiler: pour l'instant j'ai rien trouvé d'interressant sur le sujet, plusieurs erreur lors du HTTP/0.9 ainsi que du 2.0 mais pas d'erreur louche ou autre. Peux-être un jour ne sait-on jamais :)
+Spoiler: pour l'instant j'ai rien trouvé d'interressant sur le sujet, plusieurs erreurs lors du HTTP/0.9 ainsi que du 2.0 mais pas d'erreur louche ou autre. Peux-être un jour ne sait-on jamais :)
 
 
 ##### Exemples
