@@ -1,13 +1,11 @@
-## Papers
-
 *Plop ! petit papier pour mettre toute mes idées/recherches/tests à plat, si vous voulez participer n'hésitez pas ! :)*
 
 
-### HeXHTTP
+## HeXHTTP
 
 Plusieurs petits tests dans le tool HeXHTTP tel que:
 
-#### Header ``` Range: bytes=nobytes```
+### Header ``` Range: bytes=nobytes```
 
 *Pour résumé: 
 C'est la possibilité de récupérer en HTTP, non pas la totalité d'une ressource mais une partie, un intervalle (range) de celle-ci. Cette fonction est utile, par exemple, lorsqu'un transfert est interrompu en cours de route et qu'on voudrait pouvoir reprendre le téléchargement au point où il s'était arrêté, et non pas bêtement depuis le début.*
@@ -16,22 +14,23 @@ Donc si nous envoyons une requête tel que ```curl http://i.imgur.com/z4d4kWk.jp
 
 Mais si nous envoyons un "range" qui n'existe pas, que le serveur ne comprends pas tel que ```"Range: bytes=-10"``` ou simplement ```"Range: bytes=plop"``` celui-ci nous renvois (dans la plupart des cas) une réponse "416" (Range Not Satisfiable).
 
-##### GOAL
+#### GOAL
 
 Le but ici va donc être de voir si il est possible d'avoir des erreurs un peu trop "permissives" lors de cette requête ou encore d'essayer de la mettre en cache afin d'effectuer du "cache poisoning" via celle-ci.
 
-##### Exemples
+#### Exemples
 
 
 
-##### Ressources
+#### Ressources
 
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
 
+---
 
-#### L'évolution du protocole HTTP
+### L'évolution du protocole HTTP
 
-En lisant un peu l'évolution du protocol HTTP nous pouvons vor qu'il en a exister plusieurs:
+En lisant un peu l'évolution du protocol HTTP nous pouvons voir qu'il en a existé plusieurs:
 
 - HTTP/0.9: *La version initiale de HTTP n'avait pas de numéro de version. Elle fut appelée 0.9 pour la différencier des versions ultérieures. HTTP/0.9 est extrêmement simple : la requête se compose d'une ligne unique et commence par la seule méthode possible GET, suivie par le chemin pour accéder à la ressource (sans l'URL, puisque ni protocole, serveur ni port ne sont nécessaires quand on est connecté au serveur)*
 - HTTP/1.0: *HTTP/0.9 était très limité. Navigateurs et serveurs l'ont rapidement étendu vers des usages plus polyvalents.*
@@ -57,7 +56,7 @@ Bref, je me suis donc posé la question, si je testais de forcer les différents
 Spoiler: pour l'instant j'ai rien trouvé d'interressant sur le sujet, plusieurs erreurs lors du HTTP/0.9 ainsi que du 2.0 mais pas d'erreur louche ou autre. Peux-être un jour ne sait-on jamais :)
 
 
-##### Exemples
+#### Exemples
 ```
 └── HTTP/0.9 : 200 [253448 bytes] [HS: 18b]
 └── HTTP/1.0 : 200 [253448 bytes] [HS: 18b]
@@ -65,6 +64,6 @@ Spoiler: pour l'instant j'ai rien trouvé d'interressant sur le sujet, plusieurs
 └── HTTP/2   : 400 [222 bytes]   [HS: 17b]
 ```
 
-##### Ressources
+#### Ressources
 
 - https://developer.mozilla.org/fr/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
